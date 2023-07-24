@@ -1,7 +1,15 @@
 import React from "react";
 
-function Item({ item }) {
+function Item({ item, onUpdateItem, onDeleteItem}) {
 
+  function handleDeleteClick() {
+    fetch(`http://localhost:4000/items/${item.id}`, {
+    method: "DELETE",
+  })
+    .then((r) => r.json())
+    .then(() => onDeleteItem("deleted!"));
+}
+    
   function handleAddToCartClick() {
     fetch(`http://localhost:4000/items/${item.id}`, {
       method: "PATCH",
@@ -13,7 +21,7 @@ function Item({ item }) {
       }),
     })
       .then((r) => r.json())
-      .then((updatedItem) => console.log(updatedItem));
+      .then((updatedItem) => onUpdateItem(updatedItem));
   }
    
 
@@ -25,7 +33,7 @@ function Item({ item }) {
       className={item.isInCart ? "remove" : "add"}>
         {item.isInCart ? "Remove From" : "Add to"} Cart
       </button>
-      <button className="remove">Delete</button>
+      <button className="remove" onClick={handleDeleteClick}>Delete</button>
     </li>
   );
 }

@@ -37,40 +37,10 @@
       "isInCart": false
     },
     {
-      "name": "Brighton ",
-      "category": "Produce",
-      "isInCart": false,
-      "id": 7
-    },
-    {
-      "name": "Brighton ",
-      "category": "Dairy",
-      "isInCart": false,
-      "id": 8
-    },
-    {
-      "name": "",
-      "category": "Produce",
-      "isInCart": false,
-      "id": 9
-    },
-    {
-      "name": "",
-      "category": "Produce",
-      "isInCart": false,
-      "id": 10
-    },
-    {
       "name": "Shit",
       "category": "Dessert",
       "isInCart": false,
       "id": 11
-    },
-    {
-      "name": "Shit",
-      "category": "Dessert",
-      "isInCart": false,
-      "id": 12
     },
     {
       "name": "Cream",
